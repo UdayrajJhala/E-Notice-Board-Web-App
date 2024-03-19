@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Notice Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="home.html"><img class=logo src="resources/logo.png"></a>
+            <div class="navbar">
+                <a class="nav-option" href="home.html">Notices</a>
+                <a class="nav-option" href="calendar.html">Calendar</a>
+                <a class="nav-option" href="events.html">Events</a>
+                <a class="nav-option" href="notifications.html">Notifications</a>
+                <a class="nav-option" href="#">Help</a>
+                <a class="profile" href="profile.html">
+                    Profile
+                    <img class="pfp" src="resources/pfp.png">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="filter-sidebar">
+            <aside class="sidebar">
+
+                <div class="filter-options">
+                    <h3>Filter Options</h3>
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="all">All</option>
+                        <option value="Important">Important</option>
+                        <option value="Optional">Optional</option>
+                    </select>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date">
+                </div>
+                <button class="apply-filter-btn">Apply Filters</button>
+        </div>
+        <div class="main-content">
+            <div class="event-box">
+                <div class="event-header">
+                    <h2>Event 1</h2>
+                </div>
+                <div class="event-content">
+                    <p>Event description goes here.</p>
+                </div>
+
+                <div class="event-timings">
+                    <p>Date: April 3, 2024</p>
+                    <p>Time: 8:00 AM - 9:00 AM</p>
+
+                </div>
+
+            </div>
+            <div class="event-box">
+                <div class="event-header">
+                    <h2>Event 2</h2>
+                </div>
+                <div class="event-content">
+                    <p>Event description goes here.</p>
+                </div>
+
+                <div class="event-timings">
+                    <p>Date: March 23, 2024</p>
+                    <p>Time: 2:00 PM - 3:00 PM</p>
+
+                </div>
+
+            </div>
+            <div class="event-box">
+                <div class="event-header">
+                    <h2>Event 3</h2>
+                </div>
+                <div class="event-content">
+                    <p>Event description goes here.</p>
+                </div>
+
+                <div class="event-timings">
+                    <p>Date: January 1, 2024</p>
+                    <p>Time: 10:00 AM - 12:00 PM</p>
+
+                </div>
+
+            </div>
+            <div class="event-box">
+                <div class="event-header">
+                    <h2>Event 4</h2>
+                </div>
+                <div class="event-content">
+                    <p>Event description goes here.</p>
+                </div>
+
+                <div class="event-timings">
+                    <p>Date: March 12, 2024</p>
+                    <p>Time: 10:00 AM - 1:00 PM</p>
+
+                </div>
+
+            </div>
+            <div class="event-box">
+                <div class="event-header">
+                    <h2>Event 5</h2>
+                </div>
+                <div class="event-content">
+                    <p>Event description goes here.</p>
+                </div>
+
+                <div class="event-timings">
+                    <p>Date: February 1, 2024</p>
+                    <p>Time: 11:00 AM - 12:00 PM</p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
