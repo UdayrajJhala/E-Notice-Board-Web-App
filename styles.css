@@ -356,3 +356,42 @@ main {
      margin: 20px;
      margin-left: 0px;
  }
+
+ .calendar {
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #053041;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #057A9E;
+    border-radius: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .month {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .day {
+    border: 1px solid #053041;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    background-color: #7AE2F4;
+  }
+  
+  .event {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+  }
