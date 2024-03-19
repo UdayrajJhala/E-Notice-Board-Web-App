@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Notice Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="top-row">
+                <h1>Welcome!</h1>
+
+                <p>Log in with your email and password</p>
+            </div>
+            <div class="card-details">
+                <input type="password" id="password-input" placeholder="Enter your password">
+                <i class="fa fa-lock"></i>
+                <span><small class="fa fa-eye-slash passcode"></small></span>
+            </div>
+            <div class="card-details">
+                <div class="user-type-label">You are a:</div>
+                <select id="user-type" class="user-type-dropdown">
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+            
+    
+            <p class="forget">Forgot your password?</p>
+    
+            <a class="sign-in-link"href="home.html"><button class="sign-in">Sign in</button></a>
+    
+        </div>
+    </div>
+</body>
+</html>

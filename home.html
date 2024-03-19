@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Notice Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+       <img class=logo src="logo.png">
+       <div class="navbar"> 
+        <a class="nav-option" href="#">Notices</a>
+        <a class="nav-option" href="#">Calendar</a>
+        <a class="nav-option" href="#">Events</a>
+        <a class="nav-option" href="#">Notifications</a>
+        <a class="nav-option" href="#">Help</a>
+        <a class="profile" href="#">
+            Profile
+            <img class="pfp" src="pfp.png">
+        </a>
+       </div>
+    </div>
+    </header>
+    
+    <main>
+        <div class="filter-sidebar">
+        <aside class="sidebar">
+        
+            <div class="filter-options">
+                <h3>Filter Options</h3>
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="important">Important</option>
+                    <option value="event">Event</option>
+                </select>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+                        
+                <button class="apply-filter-btn">Apply Filters</button>
+            </div>
+        </aside>
+        
+        <div class="main-content">
+        <div class="notice-box">
+            <div class="notice-header">
+                <h2>Notice 1</h2>
+                
+            </div>
+            <div class="notice-content">
+                <p>Notice description goes here.</p>
+            </div>
+            <div class="notice-footer">
+                <input class="comment-btn" type="text" placeholder="Add a comment.."> 
+                <button class="upload-comment-btn">&#9166;</button>
+                <button class="expand-btn">Expand</button>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <div class="notice-header">
+                <h2>Notice 2</h2>
+                
+            </div>
+            <div class="notice-content">
+                <p>Notice description goes here.</p>
+            </div>
+            <div class="notice-footer">
+                <input class="comment-btn" type="text" placeholder="Add a comment..">
+                <button class="upload-comment-btn">&#9166;</button> 
+                <button class="expand-btn">Expand</button>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <div class="notice-header">
+                <h2>Notice 3</h2>
+                
+            </div>
+            <div class="notice-content">
+                <p>Notice description goes here.</p>
+            </div>
+            <div class="notice-footer">
+                <input class="comment-btn" type="text" placeholder="Add a comment.."> 
+                <button class="upload-comment-btn">&#9166;</button>
+                <button class="expand-btn">Expand</button>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <div class="notice-header">
+                <h2>Notice 4</h2>
+                
+            </div>
+            <div class="notice-content">
+                <p>Notice description goes here.</p>
+            </div>
+            <div class="notice-footer">
+                <input class="comment-btn" type="text" placeholder="Add a comment.."> 
+                <button class="upload-comment-btn">&#9166;</button>
+                <button class="expand-btn">Expand</button>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <div class="notice-header">
+                <h2>Notice 5</h2>
+                
+            </div>
+            <div class="notice-content">
+                <p>Notice description goes here.</p>
+            </div>
+            <div class="notice-footer">
+                <input class="comment-btn" type="text" placeholder="Add a comment.."> 
+                <button class="upload-comment-btn">&#9166;</button>
+                <button class="expand-btn">Expand</button>
+            </div>
+        </div>
+
+    </div>
+    </main>
+</body>
+</html>

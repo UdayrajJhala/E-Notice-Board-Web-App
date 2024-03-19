@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    min-height:100vh;
+    background-color:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.card{
+    max-height:320px;
+    width:320px;
+    border-radius:10px;
+    background-color:rgb(5, 48, 65);
+    padding:20px;
+    font-family: Arial;
+}
+.top-row{
+    color:#fff;
+}
+.top-row p{
+    padding-bottom:20px;
+}
+.card-details{
+    position:relative;
+    display:flex;
+    
+    padding-bottom:20px;
+}
+.card-details input{
+    height:50px;
+    width:100%;
+    font-size:18px;
+    caret-color:white;
+    background-color:#ffffff;
+    color:rgb(5, 48, 65);
+    padding:0px 20px;
+    padding-left:50px;
+    box-sizing:border-box;
+    border-radius:10px;
+    outline:none;
+    border:none;
+}
+.card-details i{
+    position:absolute;
+    left:10px;
+    top:16px;
+    color:#057A9E;
+    font-size:18px;
+}
+.card-details span{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color:#fff;
+    border-radius:50%;
+    color:#057A9E;
+    font-size:10px;
+    right:10px;
+    top:15px;
+    opacity:0.4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.card-details span:hover{
+    opacity:1;
+}
+.forget{
+    color:#fff;
+    margin-bottom:13px;
+}
+.sign-in{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+    height:60px;
+    width:100%;
+    font-size:30px;
+    color:rgb(255, 255, 255);
+    border-radius:10px;
+    background-color:#057A9E;
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.5s;
+    border:none;
+}
+.sign-in:hover{
+    background-color:#057A9E;
+    
+}
+.sign-up{
+    margin-top:30px;
+    color:#ccc;
+}
+.sign-up a{
+    color:#fff;
+    text-decoration:none;
+    transition:all 0.5s;
+}
+.sign-up a:hover{
+    color:#057A9E;
+}
+
+.warning{
+    border:2px solid rgb(255, 255, 255) !important;
+}
+
+.sign-in-link{
+    text-decoration: none;
+}
