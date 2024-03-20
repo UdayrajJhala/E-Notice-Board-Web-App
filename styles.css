@@ -138,6 +138,12 @@ main {
 
 }
 
+.notice-time {
+    font-size: 14px;
+    color: #888; 
+    margin-right: 10px; 
+}
+
 .notice-header {
     display: flex;
     justify-content: space-between;
@@ -182,7 +188,9 @@ main {
 .notice-content {
     margin-top: 10px;
     color: #333;
+    word-wrap: break-word; /* Add this line to allow long text to wrap */
 }
+
 
 .notice-footer {
     margin-top: 15px;

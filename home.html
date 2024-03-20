@@ -6,12 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Notice Board</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+       .calendar {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 300px;
+            background-color: rgb(208, 238, 249);
+            border-radius: 30px;
+        }
+
+        .calendar h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .calendar table {
+            width: 100%;
+        }
+
+        .calendar th,
+        .calendar td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        .calendar th {
+            background-color:rgb(208, 238, 249);
+            color: rgb(5, 48, 65);
+            border-radius: 5px;
+        }
+
+        .calendar td {
+            border: 1px solid #ccc;
+        }
+
+        .calendar .today {
+            background-color: lightskyblue;
+        }
+
+        .filter-sidebar {
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="header">
-            <a href="home.html"><img class=logo src="resources/logo.png"></a>
+            <a href="home.html"><img class="logo" src="resources/logo.png"></a>
             <div class="navbar">
                 <a class="nav-option" href="home.html">Notices</a>
                 <a class="nav-option" href="calendar.html">Calendar</a>
@@ -29,7 +74,6 @@
     <main>
         <div class="filter-sidebar">
             <aside class="sidebar">
-
                 <div class="filter-options">
                     <h3>Filter Options</h3>
                     <label for="category">Category:</label>
@@ -38,18 +82,39 @@
                         <option value="Assignment">Assignment</option>
                         <option value="General notice">General notice</option>
                     </select>
-
                     <label for="date">Date:</label>
                     <input type="date" id="date">
                 </div>
                 <button class="apply-filter-btn">Apply Filters</button>
+            </aside>
+
+            <!-- Dynamic Calendar -->
+            <div class="calendar">
+                <h3>Calendar</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Calendar days will be dynamically added here using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="main-content">
             <div class="notice-box">
                 <div class="notice-header">
                     <h2>Notice 1</h2>
-
+                    <div class="notice-time">2:00 PM, Feb 4, 2024</div> 
                 </div>
                 <div class="notice-content">
                     <p>Notice description goes here.
@@ -57,6 +122,7 @@
                         <br>Notice description goes here.
                         <br>Notice description goes here.
                     </p>
+                    <a href="documents/22070122240_assn7.pdf" target="_blank">Attached Document</a>
                 </div>
                 <div class="notice-footer">
                     <input class="comment-btn" type="text" placeholder="Add a comment..">
@@ -64,11 +130,11 @@
                     <button class="expand-btn">Expand</button>
                 </div>
             </div>
-
+        
             <div class="notice-box">
                 <div class="notice-header">
-                    <h2>Notice 2</h2>
-
+                    <h2>Notice 1</h2>
+                    <div class="notice-time">2:00 PM, Feb 4, 2024</div> 
                 </div>
                 <div class="notice-content">
                     <p>Notice description goes here.
@@ -76,6 +142,7 @@
                         <br>Notice description goes here.
                         <br>Notice description goes here.
                     </p>
+                    <a href="documents/22070122240_assn7.pdf" target="_blank">Attached Document</a>
                 </div>
                 <div class="notice-footer">
                     <input class="comment-btn" type="text" placeholder="Add a comment..">
@@ -83,11 +150,11 @@
                     <button class="expand-btn">Expand</button>
                 </div>
             </div>
-
+            
             <div class="notice-box">
                 <div class="notice-header">
-                    <h2>Notice 3</h2>
-
+                    <h2>Notice 1</h2>
+                    <div class="notice-time">2:00 PM, Feb 4, 2024</div> 
                 </div>
                 <div class="notice-content">
                     <p>Notice description goes here.
@@ -95,6 +162,7 @@
                         <br>Notice description goes here.
                         <br>Notice description goes here.
                     </p>
+                    <a href="documents/22070122240_assn7.pdf" target="_blank">Attached Document</a>
                 </div>
                 <div class="notice-footer">
                     <input class="comment-btn" type="text" placeholder="Add a comment..">
@@ -102,11 +170,11 @@
                     <button class="expand-btn">Expand</button>
                 </div>
             </div>
-
+        
             <div class="notice-box">
                 <div class="notice-header">
-                    <h2>Notice 4</h2>
-
+                    <h2>Notice 1</h2>
+                    <div class="notice-time">2:00 PM, Feb 4, 2024</div> 
                 </div>
                 <div class="notice-content">
                     <p>Notice description goes here.
@@ -114,6 +182,7 @@
                         <br>Notice description goes here.
                         <br>Notice description goes here.
                     </p>
+                    <a href="documents/22070122240_assn7.pdf" target="_blank">Attached Document</a>
                 </div>
                 <div class="notice-footer">
                     <input class="comment-btn" type="text" placeholder="Add a comment..">
@@ -121,28 +190,54 @@
                     <button class="expand-btn">Expand</button>
                 </div>
             </div>
-
-            <div class="notice-box">
-                <div class="notice-header">
-                    <h2>Notice 5</h2>
-
-                </div>
-                <div class="notice-content">
-                    <p>Notice description goes here.
-                        <br>Notice description goes here.
-                        <br>Notice description goes here.
-                        <br>Notice description goes here.
-                    </p>
-                </div>
-                <div class="notice-footer">
-                    <input class="comment-btn" type="text" placeholder="Add a comment..">
-                    <button class="upload-comment-btn">&#9166;</button>
-                    <button class="expand-btn">Expand</button>
-                </div>
-            </div>
-
+        
+        
         </div>
     </main>
+
+    <script>
+        // JavaScript code to dynamically generate calendar days
+        function generateCalendar() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth();
+            var firstDay = new Date(year, month, 1);
+            var lastDay = new Date(year, month + 1, 0);
+            var daysInMonth = lastDay.getDate();
+            var startingDay = firstDay.getDay();
+            var calendarBody = document.getElementById("calendar-body");
+            var date = 1;
+
+            for (var i = 0; i < 6; i++) {
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 7; j++) {
+                    if (i === 0 && j < startingDay) {
+                        var cell = document.createElement("td");
+                        var cellText = document.createTextNode("");
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+                    } else if (date > daysInMonth) {
+                        break;
+                    } else {
+                        var cell = document.createElement("td");
+                        var cellText = document.createTextNode(date);
+                        if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                            cell.classList.add("today");
+                        }
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+                        date++;
+                    }
+                }
+
+                calendarBody.appendChild(row);
+            }
+        }
+
+        // Call the function to generate the calendar when the page loads
+        generateCalendar();
+    </script>
 </body>
 
 </html>

@@ -7,9 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const title = document.getElementById('notice-title').value;
         const description = document.getElementById('notice-description').value;
+        const fileInput = document.getElementById('notice-file');
+        const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : ''; 
 
         if (title && description) {
-            const noticeBox = createNoticeBox(title, description);
+            const noticeBox = createNoticeBox(title, description, fileName);
             mainContent.appendChild(noticeBox);
 
             addNoticeForm.reset();
@@ -27,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function createNoticeBox(title, description) {
+    function createNoticeBox(title, description, fileName, fileURL) {
         const noticeBox = document.createElement('div');
         noticeBox.classList.add('notice-box');
-
+    
         noticeBox.innerHTML = `
             <div class="notice-header">
                 <h2>${title}</h2>
@@ -38,9 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="notice-content">
                 <p>${description}</p>
+                <p>Attached Document: <a href="documents/${fileName}" target="_blank">${fileName}</a></p>
             </div>
         `;
-
+    
         return noticeBox;
     }
+    
 });
