@@ -393,52 +393,6 @@ main {
     margin-left: 0px;
 }
 
-.calendar {
-    margin: 20px auto;
-    max-width: 600px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-caption {
-    text-align: center;
-    font-size: 1.5em;
-    padding: 10px;
-    background-color: rgb(5, 48, 65);
-    color: #7AE2F4;
-}
-
-thead {
-    background-color: #f8f9fa;
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #057A9E;
-    color: #fff;
-}
-
-td {
-    border: 1px solid #ccc;
-}
-
-td:hover {
-    background-color: #f0f0f0;
-}
-
 .notification-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -556,15 +510,15 @@ td:hover {
 
 
 .event-box {
-    position: relative; /* Needed for positioning the delete button */
+    position: relative; 
 }
 
 .delete-event-btn {
     position: absolute;
     bottom: 5px;
     right: 5px;
-    font-size: 12px; /* Adjust size as needed */
-    padding: 4px 8px; /* Adjust padding as needed */
+    font-size: 12px; 
+    padding: 4px 8px; 
     background-color: #ffffff;
     color: #053041;
     border: 1px solid #053041;

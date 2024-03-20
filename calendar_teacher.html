@@ -6,12 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Notice Board</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+
+        .calendar-header {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #053041;
+            color: white;
+            grid-column: span 7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .calendar-header button {
+            background: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .calendar-day {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f5f5f5;
+        }
+
+        .current-month {
+            background-color: #053041;
+            color: white;
+        }
+
+        .calendar-event {
+            background-color: #28a745;
+            color: white;
+            font-size: 12px;
+            padding: 2px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="header">
-            <a href="home.html"><img class=logo src="resources/logo.png"></a>
+            <a href="home_teacher.html"><img class="logo" src="resources/logo.png"></a>
             <div class="navbar">
                 <a class="nav-option" href="home_teacher.html">Notices</a>
                 <a class="nav-option" href="calendar_teacher.html">Calendar</a>
@@ -27,67 +74,80 @@
     </header>
 
     <main>
-        <div class="calendar">
-            <table>
-                <caption>March 2024</caption>
-                <thead>
-                    <tr>
-                        <th>Sun</th>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>14</td>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td>20</td>
-                        <td>21</td>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                        <td>26</td>
-                    </tr>
-                    <tr>
-                        <td>27</td>
-                        <td>28</td>
-                        <td>29</td>
-                        <td>30</td>
-                        <td>31</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div id="calendar" class="calendar"></div>
     </main>
+
+    <script>
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        function renderCalendar() {
+            const calendarContainer = document.getElementById('calendar');
+            calendarContainer.innerHTML = '';
+
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+            const header = document.createElement('div');
+            header.className = 'calendar-header';
+            header.innerHTML = `
+                <button onclick="prevMonth()">&#10094;</button>
+                <span>${monthNames[currentMonth]} ${currentYear}</span>
+                <button onclick="nextMonth()">&#10095;</button>
+            `;
+            calendarContainer.appendChild(header);
+
+            const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            for (let day of weekdays) {
+                const weekday = document.createElement('div');
+                weekday.className = 'calendar-day';
+                weekday.textContent = day;
+                calendarContainer.appendChild(weekday);
+            }
+
+            const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+            const startingDay = firstDayOfMonth.getDay();
+
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            for (let i = 0; i < startingDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'calendar-day';
+                calendarContainer.appendChild(emptyCell);
+            }
+
+            for (let i = 1; i <= daysInMonth; i++) {
+                const dayCell = document.createElement('div');
+                dayCell.className = 'calendar-day';
+                dayCell.textContent = i;
+                if (i === new Date().getDate() && currentMonth === new Date().getMonth() && currentYear === new Date().getFullYear()) {
+                    dayCell.classList.add('current-month');
+                }
+                calendarContainer.appendChild(dayCell);
+            }
+        }
+
+        function prevMonth() {
+            currentMonth -= 1;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear -= 1;
+            }
+            renderCalendar();
+        }
+
+        function nextMonth() {
+            currentMonth += 1;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear += 1;
+            }
+            renderCalendar();
+        }
+
+        renderCalendar();
+    </script>
+</body>
+
+</html>
