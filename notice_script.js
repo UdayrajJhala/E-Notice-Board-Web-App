@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const noticeBox = createNoticeBox(title, description);
             mainContent.appendChild(noticeBox);
 
-            // Reset form fields
             addNoticeForm.reset();
         } else {
             alert('Please fill in both title and description fields.');
