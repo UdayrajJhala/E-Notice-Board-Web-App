@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Events Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="home_teacher.html"><img class="logo" src="resources/logo.png"></a>
+            <div class="navbar">
+                <a class="nav-option" href="home_teacher.html">Notices</a>
+                <a class="nav-option" href="calendar_teacher.html">Calendar</a>
+                <a class="nav-option" href="events_teacher.html">Events</a>
+                <a class="nav-option" href="notifications_teacher.html">Notifications</a>
+                <a class="nav-option" href="#">Help</a>
+                <a class="profile" href="profile_teacher.html">
+                    Profile
+                    <img class="pfp" src="resources/pfp.png">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="filter-sidebar">
+            <aside class="sidebar">
+                <div class="filter-options">
+                    <h3>Add Event</h3>
+                    <form id="add-event-form">
+                        <label for="event-title">Title:</label>
+                        <input type="text" id="event-title" name="event-title" required>
+
+                        <label for="event-description">Description:</label>
+                        <textarea id="event-description" name="event-description" rows="4" required></textarea>
+
+                        <label for="event-date">Date:</label>
+                        <input type="date" id="event-date" name="event-date" required>
+
+                        <label for="event-start-time">Start Time:</label>
+                        <input type="time" id="event-start-time" name="event-start-time" required>
+
+                        <label for="event-end-time">End Time:</label>
+                        <input type="time" id="event-end-time" name="event-end-time" required>
+
+                        <button type="submit" class="add-event-btn">Add Event</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+        <div class="main-content">
+
+        </div>
+    </main>
+
+    <script src="events_script.js"></script>
+</body>
+
+</html>

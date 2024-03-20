@@ -506,3 +506,74 @@ td:hover {
     margin-top: 10px;
     font-size: 12px;
 }
+
+.add-notice-btn {
+    background-color: #ffffff;
+    color: rgb(5, 48, 65);
+    padding: 8px 15px;
+    border: solid;
+    border-color: #053041;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.add-notice-btn:hover {
+    background-color: #057A9E;
+}
+
+.delete-notice-btn {
+    background-color: #ffffff;
+    color: #ff0000;
+    padding: 8px 15px;
+    border: solid;
+    border-color: #ff0000;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.delete-notice-btn:hover {
+    background-color: #ffcccc;
+}
+
+.add-event-btn {
+    background-color: #ffffff;
+    color: rgb(5, 48, 65);
+    padding: 8px 15px;
+    border: solid;
+    border-color: #053041;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.add-event-btn:hover {
+    background-color: #057A9E;
+}
+
+
+.event-box {
+    position: relative; /* Needed for positioning the delete button */
+}
+
+.delete-event-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px; /* Adjust size as needed */
+    padding: 4px 8px; /* Adjust padding as needed */
+    background-color: #ffffff;
+    color: #053041;
+    border: 1px solid #053041;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-event-btn:hover {
+    background-color: #053041;
+    color: #ffffff;
+}
+
