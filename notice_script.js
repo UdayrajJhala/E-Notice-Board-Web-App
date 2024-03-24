@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const description = document.getElementById('notice-description').value;
         const fileInput = document.getElementById('notice-file');
         const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : ''; 
+        const meetLink = document.getElementById('meet-link').value.trim(); // Get the meet link
 
         if (title && description) {
-            const noticeBox = createNoticeBox(title, description, fileName);
+            const noticeBox = createNoticeBox(title, description, fileName, meetLink); // Pass meet link to createNoticeBox function
             mainContent.appendChild(noticeBox);
 
             addNoticeForm.reset();
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function createNoticeBox(title, description, fileName, fileURL) {
+    function createNoticeBox(title, description, fileName, meetLink) { // Add meetLink parameter
         const noticeBox = document.createElement('div');
         noticeBox.classList.add('notice-box');
     
@@ -40,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="notice-content">
                 <p>${description}</p>
-                <p>Attached Document: <a href="documents/${fileName}" target="_blank">${fileName}</a></p>
+                ${fileName ? `<p>Attached Document: <a href="documents/${fileName}" target="_blank">${fileName}</a></p>` : ''}
+                ${meetLink ? `<p>Google Meet Link: <a href="${meetLink}" target="_blank">${meetLink}</a></p>` : ''}
             </div>
         `;
     
         return noticeBox;
     }
-    
 });
