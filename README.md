@@ -32,7 +32,7 @@ Install MySQL on your system
 ```
 create table credentials
 (email varchar(50),
-passvarchar(50));
+pass varchar(50));
 ```
 Install dependencies
 
