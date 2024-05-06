@@ -1,5 +1,3 @@
-// server.js
-
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -50,6 +48,20 @@ app.post('/login', (req, res) => {
 
     // Redirect user to appropriate page
     res.redirect(signInLink);
+  });
+});
+
+// Route to fetch notices from the database
+app.get('/notices', (req, res) => {
+  const query = 'SELECT title, notice FROM notices';
+  connection.query(query, (err, results) => {
+    if (err) {
+      console.error('Error executing MySQL query:', err);
+      return res.status(500).send('Internal server error');
+    }
+    
+    // Send notices data to the client
+    res.json(results);
   });
 });
 
