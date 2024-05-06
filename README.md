@@ -46,8 +46,8 @@ change the username and password according to your MySQL server
 ```
   const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'Jhala@27',
+  user: 'your-username',
+  password: 'your-password',
   database: 'noticeboard'});
 ```
 
