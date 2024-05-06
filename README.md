@@ -20,7 +20,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd E-Notice-Board-Web-App
 ```
 
 Install NodeJS on your system
