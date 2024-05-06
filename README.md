@@ -30,7 +30,9 @@ Install MySQL on your system
 - create a database 'noticeboard'
 - create a table user using this query 
 ```
-create table credentials(email varchar(50)passvarchar(50));
+create table credentials
+(email varchar(50),
+passvarchar(50));
 ```
 Install dependencies
 
